@@ -72,7 +72,7 @@ const ManageProducts: React.FC = () => {
     if (!e.target.files || !editForm) return;
     
     setUploading(true);
-    const files = Array.from(e.target.files);
+    const files = Array.from(e.target.files) as File[];
     const newImages: string[] = [];
 
     const readFile = (file: File): Promise<string> => {
